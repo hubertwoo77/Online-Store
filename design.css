@@ -304,3 +304,62 @@ border-radius: 50px;
 background-color: rgb(222, 205, 229);
 }
 
+#eco{
+  background-color: rgb(97, 31, 120);
+}
+
+#eco h4{
+  text-align: center;
+  color: #78ce86; 
+}
+
+#eco h5{
+  color: #e8df7e;
+  text-align: center;
+}
+
+footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .col{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+footer h5{
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+
+footer p{
+  font-size: 13px;
+  margin: 0 0 8px 0;
+}
+
+footer a{
+  text-decoration: none;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+footer .col .icon{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+footer .col .icon:hover,
+footer a:hover{
+  color: #78ce86;
+}
+
+footer .copyright{
+  width: 100%;
+  text-align: center;
+}
