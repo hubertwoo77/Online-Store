@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Spartan', sans-serif;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 40px;
+  color: #222;
+}
+
+h2 {
+  font-size: 80px;
+  line-height: 64px;
+  color: #463;
+}
+h3 {
+  font-size: 30px;
+  line-height: 64px;
+  color: #222;
+}
+h4 {
+  font-size: 30px;
+  line-height: 64px;
+  color: #ffffff;
+}
+h5 {
+  font-size: 20px;
+  line-height: 64px;
+  color: #222;
+}
+h6 {
+  font-size: 50px;
+  line-height: 64px;
+  color: #222;
+}
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+.section-p1 {
+  padding: 40px 80px;
+}
+
+/* Header Start */
+
+#header{
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 10px 80px;
+background: #78ce86;
+box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+z-index: 999;
+position: sticky;
+top: 0;
+left: 0;
+}
+
+#header li{
+list-style: none;
+padding: 0 20px;
+}
+
+#header li a{
+text-decoration: none;
+font-size: 50px;  
+font-weight: 900;
+color: #000000;
+}
+
+#menu{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+#menu li{
+list-style: none;
+padding: 0 20px;
+position: relative; 
+}
+
+#menu li a{ 
+text-decoration: none;
+font-size: 16px;
+font-weight: 600;
+color: #222;
+transition: 0.3s ease;
+}
+
+#menu li a:hover,
+#menu li a.active{
+color: #e8df7e; 
+}
+
+#menu li a.active::after,
+#menu li a:hover::after{
+content: "";
+width: 30%;
+height: 2px;
+background: #e8df7e; 
+position: absolute;
+bottom: -4px;
+left: 20px;
+}
+
+/* Home Page */
+
+/* Start section for carousel / slideshow */
+.slide > img{
+height: 60vh;
+display: block;
+margin-left: auto;
+}
+
+/* Slideshow text formatting */
+.slide div{
+position: absolute;
+display: flex;
+flex-direction: column;
+top: 30%;
+right: 50%;
+}
+
+.slide div button{
+color: #e8df7e;
+background-color: #78ce86;
+border: 0;
+padding: 14px 80px 14px 65px;
+background-repeat: no-repeat;
+cursor: pointer;
+font-weight: 800;
+font-size: 25;
+}
+
+.slide div h1{
+padding-bottom: 15px;
+}
+
+/* Formatting and style of the slideshow itself */
+.carousel{
+width: auto;
+height: 60vh;
+position: relative;
+background-color: white;
+}
+
+.carousel > ul{
+margin: 0;
+padding: 0;
+list-style: none;
+}
+
+/* Hides slides that are not displayed */
+.slide{
+position: absolute;
+inset: 0;
+opacity: 0;
+transition: 200ms opacity ease-in-out;
+transition-delay: 0ms;
+}
+
+#slides li{
+display: flex;
+flex-direction: row;
+align-items: left;
+justify-content: space-between;
+}
+
+/* Displayed slide formatting */
+.slide[data-active]{
+opacity: 1;
+z-index: 1;
+transition-delay: 0ms;
+}
+
+.carousel-button{
+position: absolute; 
+z-index: 2;
+background: none;
+border: none;
+font-size: 4rem;
+top: 80%;
+transform: translateY(-50%);
+color: rgba(0,0,0,0.5);
+cursor: pointer;
+border-radius: 0.25rem;
+}
+
+.carousel-button:hover,
+.carousel-button:focus{
+color: black;
+}
+
+.carousel-button.back{
+left: 1rem;
+}
+
+.carousel-button.forward{
+right: 1rem;
+}
+
+/* End section for carousel / slideshow */
+
+#scrolling{
+display: flex;
+flex-direction: row;
+align-items: center;
+height: 10vh;
+background-color: rgb(0, 0, 0);
+overflow: hidden;
+}
+
+.scroll{
+display: flex;
+text-align: center;
+white-space: nowrap;
+margin: auto auto;
+}
+
+.scroll h4{
+display: flex;
+padding-left: 100%;
+padding-top: 10px;
+white-space: nowrap;
+line-height: 90%;
+font-size: 85px;
+animation: scroll 18s linear infinite;
+}
+
+.scroll2 h4{
+animation-delay: 6s; 
+}
+
+@keyframes scroll{
+from{
+  transform: translateX(100%);
+}
+to{
+  transform: translateX(-300%);
+}
+}
+
+#trending{
+background-color: #e8df7e;
+text-align: center;
+}
+
+#trending .products{
+display: flex;
+justify-content: space-between;
+padding-top: 20px;
+flex-wrap: wrap;
+}
+
+#trending .item{
+width: 23%;
+min-width: 250px;
+padding: 10px 12px;
+border: 1px solid rgb(97, 31, 120);
+border-radius: 25px;
+cursor: pointer;
+box-shadow: 20px 20px 30px rgba(97, 31, 120, 0.2);
+margin: 15px 0;
+transition: 0.2s ease; 
+position: relative;
+}
+
+#trending .item:hover{
+box-shadow: 20px 20px 30px rgba(97, 31, 120, 0.6);
+}
+
+#trending .item img{
+width: 100%;
+border-radius: 20px;
+}
+
+#trending .item .description{
+text-align: start;
+padding: 10px 0;
+}
+
+#trending .item .description span{
+color: #465b52;
+font-size: 12px;
+}
+
+#trending .item .cart{
+color: rgb(97, 31, 120);
+width: 40px;
+height: 40px;
+line-height: 40px;
+transition: 0.2s ease; 
+position: relative;
+}
+
+#trending .item .cart:hover{
+border-radius: 50px;
+background-color: rgb(222, 205, 229);
+}
+
